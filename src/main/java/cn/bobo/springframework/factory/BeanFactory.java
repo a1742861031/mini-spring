@@ -1,4 +1,6 @@
-package cn.bobo.springframework;
+package cn.bobo.springframework.factory;
+
+import cn.bobo.springframework.BeansException;
 
 /**
  * @author by bobo

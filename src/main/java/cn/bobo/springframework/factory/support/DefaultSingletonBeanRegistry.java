@@ -1,6 +1,6 @@
-package cn.bobo.springframework.support;
+package cn.bobo.springframework.factory.support;
 
-import cn.bobo.springframework.config.SingletonBeanRegistry;
+import cn.bobo.springframework.factory.config.SingletonBeanRegistry;
 
 import java.util.HashMap;
 import java.util.Map;

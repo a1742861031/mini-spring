@@ -1,6 +1,6 @@
-package cn.bobo.springframework.support;
+package cn.bobo.springframework.factory.support;
 
-import cn.bobo.springframework.config.BeanDefinition;
+import cn.bobo.springframework.factory.config.BeanDefinition;
 
 /**
  * @author by bobo
