@@ -12,13 +12,22 @@ import cn.bobo.springframework.factory.config.BeanDefinition;
 public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements BeanFactory {
     @Override
     public Object getBean(String name) throws BeansException {
-        //如果获取到bean对象，直接返回
+        return doGetBean(name, null);
+    }
+
+    @Override
+    public Object getBean(String name, Object... args) throws BeansException {
+        return doGetBean(name, args);
+    }
+
+    protected <T> T doGetBean(final String name, final Object[] args) {
         Object bean = getSingleTon(name);
         if (bean != null) {
-            return bean;
+            return (T) bean;
         }
+
         BeanDefinition beanDefinition = getBeanDefinition(name);
-        return createBean(name, beanDefinition);
+        return (T) createBean(name, beanDefinition, args);
     }
 
     /**
@@ -33,10 +42,11 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
     /**
      * 创建bean对象
      *
-     * @param beanName
-     * @param beanDefinition
-     * @return
-     * @throws BeansException
+     * @param beanName       beanName
+     * @param beanDefinition beanDefinition
+     * @param args           参数
+     * @return Object对象
+     * @throws BeansException bean异常
      */
-    protected abstract Object createBean(String beanName, BeanDefinition beanDefinition) throws BeansException;
+    protected abstract Object createBean(String beanName, BeanDefinition beanDefinition, Object[] args) throws BeansException;
 }
