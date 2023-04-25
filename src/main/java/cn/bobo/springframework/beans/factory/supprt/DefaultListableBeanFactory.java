@@ -1,7 +1,7 @@
-package cn.bobo.springframework.factory.supprt;
+package cn.bobo.springframework.beans.factory.supprt;
 
 import cn.bobo.springframework.BeansException;
-import cn.bobo.springframework.factory.config.BeanDefinition;
+import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -15,13 +15,23 @@ public class DefaultListableBeanFactory extends AbstractAutowireCapableBeanFacto
     private final Map<String, BeanDefinition> beanDefinitionMap = new HashMap<>();
 
     @Override
-    protected BeanDefinition getBeanDefinition(String beanName) throws BeansException {
+    public BeanDefinition getBeanDefinition(String beanName) throws BeansException {
         BeanDefinition beanDefinition = beanDefinitionMap.get(beanName);
 
         if (beanDefinition == null) {
             throw new BeansException("No bean named '" + beanName + "' is defined");
         }
         return beanDefinition;
+    }
+
+    @Override
+    public boolean containsBeanDefinition(String beanName) {
+        return beanDefinitionMap.containsKey(beanName);
+    }
+
+    @Override
+    public String[] getBeanDefinitionNames() {
+        return beanDefinitionMap.keySet().toArray(new String[0]);
     }
 
     @Override

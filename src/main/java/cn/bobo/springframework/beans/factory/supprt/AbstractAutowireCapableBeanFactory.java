@@ -1,10 +1,10 @@
-package cn.bobo.springframework.factory.supprt;
+package cn.bobo.springframework.beans.factory.supprt;
 
 import cn.bobo.springframework.BeansException;
 import cn.bobo.springframework.PropertyValue;
 import cn.bobo.springframework.PropertyValues;
-import cn.bobo.springframework.factory.config.BeanDefinition;
-import cn.bobo.springframework.factory.config.BeanReference;
+import cn.bobo.springframework.beans.factory.config.BeanDefinition;
+import cn.bobo.springframework.beans.factory.config.BeanReference;
 import cn.hutool.core.bean.BeanUtil;
 
 import java.lang.reflect.Constructor;

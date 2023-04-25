@@ -1,6 +1,6 @@
-package cn.bobo.springframework.factory.supprt;
+package cn.bobo.springframework.beans.factory.supprt;
 
-import cn.bobo.springframework.factory.config.BeanDefinition;
+import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.NoOp;
 

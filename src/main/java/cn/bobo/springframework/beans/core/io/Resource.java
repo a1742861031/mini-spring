@@ -1,4 +1,4 @@
-package cn.bobo.springframework.factory.core.io;
+package cn.bobo.springframework.beans.core.io;
 
 import java.io.IOException;
 import java.io.InputStream;

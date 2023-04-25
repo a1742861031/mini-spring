@@ -1,4 +1,4 @@
-package cn.bobo.springframework.factory.config;
+package cn.bobo.springframework.beans.factory.config;
 
 import cn.bobo.springframework.PropertyValues;
 

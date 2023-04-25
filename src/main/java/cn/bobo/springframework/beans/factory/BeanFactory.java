@@ -1,4 +1,4 @@
-package cn.bobo.springframework.factory;
+package cn.bobo.springframework.beans.factory;
 
 import cn.bobo.springframework.BeansException;
 

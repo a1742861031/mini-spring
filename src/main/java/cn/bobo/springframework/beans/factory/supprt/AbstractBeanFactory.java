@@ -1,8 +1,8 @@
-package cn.bobo.springframework.factory.supprt;
+package cn.bobo.springframework.beans.factory.supprt;
 
 import cn.bobo.springframework.BeansException;
-import cn.bobo.springframework.factory.BeanFactory;
-import cn.bobo.springframework.factory.config.BeanDefinition;
+import cn.bobo.springframework.beans.factory.BeanFactory;
+import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 
 /**
  * @author by bobo

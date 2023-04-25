@@ -1,7 +1,7 @@
-package cn.bobo.springframework.factory.supprt;
+package cn.bobo.springframework.beans.factory.supprt;
 
 import cn.bobo.springframework.BeansException;
-import cn.bobo.springframework.factory.config.BeanDefinition;
+import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.InvocationTargetException;
