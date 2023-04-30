@@ -1,4 +1,4 @@
-package cn.bobo.springframework.test.bean;
+package cn.bobo.springframework.test.bean.dao;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -9,6 +9,7 @@ import java.util.Map;
  * @Date 2023/4/25 14:58
  */
 public class UserDao {
+
     private static Map<String, String> hashMap = new HashMap<>();
 
     static {
@@ -20,4 +21,5 @@ public class UserDao {
     public String queryUserName(String uId) {
         return hashMap.get(uId);
     }
+
 }

@@ -1,13 +1,13 @@
 package cn.bobo.springframework.beans.factory.xml;
 
-import cn.bobo.springframework.BeansException;
-import cn.bobo.springframework.PropertyValue;
-import cn.bobo.springframework.beans.core.io.Resource;
-import cn.bobo.springframework.beans.core.io.ResourceLoader;
+import cn.bobo.springframework.beans.BeansException;
+import cn.bobo.springframework.beans.PropertyValue;
 import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 import cn.bobo.springframework.beans.factory.config.BeanReference;
 import cn.bobo.springframework.beans.factory.supprt.AbstractBeanDefinitionReader;
 import cn.bobo.springframework.beans.factory.supprt.BeanDefinitionRegistry;
+import cn.bobo.springframework.core.io.Resource;
+import cn.bobo.springframework.core.io.ResourceLoader;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.core.util.XmlUtil;
 import org.w3c.dom.Document;
@@ -55,6 +55,13 @@ public class XmlBeanDefinitionReader extends AbstractBeanDefinitionReader {
         ResourceLoader resourceLoader = getResourceLoader();
         Resource resource = resourceLoader.getResource(location);
         loadBeanDefinitions(resource);
+    }
+
+    @Override
+    public void loadBeanDefinitions(String... location) throws BeansException {
+        for (String s : location) {
+            loadBeanDefinitions(s);
+        }
     }
 
     protected void doLoadBeanDefinitions(InputStream inputStream) throws ClassNotFoundException {

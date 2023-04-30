@@ -1,6 +1,6 @@
 package cn.bobo.springframework.beans.factory.config;
 
-import cn.bobo.springframework.PropertyValues;
+import cn.bobo.springframework.beans.PropertyValues;
 
 /**
  * @author by bobo

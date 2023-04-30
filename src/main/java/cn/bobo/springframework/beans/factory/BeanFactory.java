@@ -1,6 +1,6 @@
 package cn.bobo.springframework.beans.factory;
 
-import cn.bobo.springframework.BeansException;
+import cn.bobo.springframework.beans.BeansException;
 
 /**
  * @author by bobo
@@ -26,4 +26,15 @@ public interface BeanFactory {
      * @throws BeansException BeansException
      */
     Object getBean(String name, Object... args) throws BeansException;
+
+    /**
+     * 获取指定类型的bean
+     *
+     * @param name        beanName
+     * @param requireType 要求的格式
+     * @param <T>         范型
+     * @return bean对象
+     * @throws BeansException 异常
+     */
+    <T> T getBean(String name, Class<T> requireType) throws BeansException;
 }

@@ -1,4 +1,4 @@
-package cn.bobo.springframework.beans.core.io;
+package cn.bobo.springframework.core.io;
 
 import java.io.File;
 import java.io.FileInputStream;

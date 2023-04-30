@@ -1,6 +1,6 @@
 package cn.bobo.springframework.beans.factory.supprt;
 
-import cn.bobo.springframework.BeansException;
+import cn.bobo.springframework.beans.BeansException;
 import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 
 /**
