@@ -1,4 +1,4 @@
-package cn.bobo.springframework.beans.core.io;
+package cn.bobo.springframework.core.io;
 
 import cn.hutool.core.lang.Assert;
 import cn.hutool.core.util.ClassUtil;

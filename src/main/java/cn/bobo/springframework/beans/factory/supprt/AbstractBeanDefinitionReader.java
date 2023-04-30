@@ -1,7 +1,7 @@
 package cn.bobo.springframework.beans.factory.supprt;
 
-import cn.bobo.springframework.beans.core.io.DefaultResourceLoader;
-import cn.bobo.springframework.beans.core.io.ResourceLoader;
+import cn.bobo.springframework.core.io.DefaultResourceLoader;
+import cn.bobo.springframework.core.io.ResourceLoader;
 
 /**
  * @author by bobo

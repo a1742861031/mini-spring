@@ -1,11 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
 
-    <bean id="userDao" class="cn.bobo.springframework.test.bean.UserDao"/>
+    <bean id="userDao" class="cn.bobo.springframework.test.bean.dao.UserDao"/>
 
-    <bean id="userService" class="cn.bobo.springframework.test.bean.UserService">
-        <property name="uId" value="10001"/>
+    <bean id="userService" class="cn.bobo.springframework.test.bean.service.UserService">
+        <property name="uId" value="10002"/>
+        <property name="company" value="腾讯"/>
+        <property name="location" value="深圳"/>
         <property name="userDao" ref="userDao"/>
     </bean>
+
+    <bean class="cn.bobo.springframework.test.bean.common.MyBeanFactoryPostProcessor"/>
+    <bean class="cn.bobo.springframework.test.bean.common.MyBeanPostProcessor"/>
 
 </beans>

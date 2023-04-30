@@ -1,12 +1,15 @@
 package cn.bobo.springframework.test.bean;
 
-import cn.bobo.springframework.PropertyValue;
-import cn.bobo.springframework.PropertyValues;
-import cn.bobo.springframework.beans.core.io.DefaultResourceLoader;
+import cn.bobo.springframework.beans.PropertyValue;
+import cn.bobo.springframework.beans.PropertyValues;
 import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 import cn.bobo.springframework.beans.factory.config.BeanReference;
 import cn.bobo.springframework.beans.factory.supprt.DefaultListableBeanFactory;
 import cn.bobo.springframework.beans.factory.xml.XmlBeanDefinitionReader;
+import cn.bobo.springframework.context.ClassPathXmlApplicationContext;
+import cn.bobo.springframework.core.io.DefaultResourceLoader;
+import cn.bobo.springframework.test.bean.dao.UserDao;
+import cn.bobo.springframework.test.bean.service.UserService;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -58,6 +61,17 @@ public class ApiTest {
 
         // 3. 获取Bean对象调用方法
         UserService userService = (UserService) beanFactory.getBean("userService", UserService.class);
+        String result = userService.queryUserInfo();
+        System.out.println("测试结果：" + result);
+    }
+
+    @Test
+    public void test_xml() {
+        // 1.初始化 BeanFactory
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+
+        // 2. 获取Bean对象调用方法
+        UserService userService = applicationContext.getBean("userService", UserService.class);
         String result = userService.queryUserInfo();
         System.out.println("测试结果：" + result);
     }

@@ -1,4 +1,4 @@
-package cn.bobo.springframework;
+package cn.bobo.springframework.beans;
 
 import java.util.ArrayList;
 import java.util.List;

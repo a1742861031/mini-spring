@@ -1,8 +1,8 @@
 package cn.bobo.springframework.beans.factory.supprt;
 
-import cn.bobo.springframework.BeansException;
-import cn.bobo.springframework.beans.core.io.Resource;
-import cn.bobo.springframework.beans.core.io.ResourceLoader;
+import cn.bobo.springframework.beans.BeansException;
+import cn.bobo.springframework.core.io.Resource;
+import cn.bobo.springframework.core.io.ResourceLoader;
 
 /**
  * @author by bobo
@@ -19,4 +19,5 @@ public interface BeanDefinitionReader {
     void loadBeanDefinitions(Resource... resources) throws BeansException;
 
     void loadBeanDefinitions(String location) throws BeansException;
+    void loadBeanDefinitions(String... location) throws BeansException;
 }

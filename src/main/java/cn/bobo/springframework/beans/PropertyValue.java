@@ -1,4 +1,4 @@
-package cn.bobo.springframework;
+package cn.bobo.springframework.beans;
 
 /**
  * @author by bobo
