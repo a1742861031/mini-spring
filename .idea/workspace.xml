@@ -4,33 +4,27 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="99da303a-bc1e-45ba-be1a-041761cfa573" name="Changes" comment="hello-spring">
+    <list default="true" id="99da303a-bc1e-45ba-be1a-041761cfa573" name="Changes" comment="完成应用上下文">
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/DisposableBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/InitializingBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/DisposableBeanAdapter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/BeansException.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/BeansException.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/PropertyValue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/PropertyValue.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/PropertyValues.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/PropertyValues.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/core/io/ClassPathResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/core/io/ClassPathResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/core/io/DefaultResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/core/io/DefaultResourceLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/core/io/FileSystemResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/core/io/FileSystemResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/core/io/Resource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/core/io/Resource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/core/io/ResourceLoader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/core/io/ResourceLoader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/core/io/UrlResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/core/io/UrlResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/BeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/BeanFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/config/AutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/config/AutowireCapableBeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/config/BeanDefinition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/config/BeanDefinition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/config/ConfigurableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/config/ConfigurableBeanFactory.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/AbstractAutowireCapableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/AbstractAutowireCapableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/AbstractBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/AbstractBeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/AbstractBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/AbstractBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/BeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/BeanDefinitionReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/BeanDefinitionRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/BeanDefinitionRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/DefaultListableBeanFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/DefaultListableBeanFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/SimpleInstantiationStrategy.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/SimpleInstantiationStrategy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/DefaultSingletonBeanRegistry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/DefaultSingletonBeanRegistry.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/xml/XmlBeanDefinitionReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/context/AbstractApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/context/AbstractApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/context/ApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/context/ApplicationContext.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/context/ConfigurableApplicationContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/context/ConfigurableApplicationContext.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/spring.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/spring.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/ApiTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/ApiTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/dao/UserDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/bobo/springframework/test/bean/ApiTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/cn/bobo/springframework/test/bean/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/common/MyBeanFactoryPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/common/MyBeanFactoryPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/common/MyBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/common/MyBeanPostProcessor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/dao/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/dao/UserDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/cn/bobo/springframework/test/bean/service/UserService.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +76,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ApiTest.test_xml">
+  <component name="RunManager" selected="JUnit.ApiTest.test_withXmlResource">
     <configuration name="ApiTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="mini-spring" />
       <extension name="coverage">
@@ -164,8 +158,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ApiTest.test_xml" />
         <item itemvalue="JUnit.ApiTest.test_withXmlResource" />
+        <item itemvalue="JUnit.ApiTest.test_xml" />
         <item itemvalue="JUnit.ApiTest.test_BeanFactory" />
         <item itemvalue="JUnit.ApiTest.test_BeanFactoryWithParams" />
         <item itemvalue="JUnit.ApiTest" />
@@ -187,7 +181,9 @@
       <workItem from="1682405718694" duration="316000" />
       <workItem from="1682406142277" duration="5668000" />
       <workItem from="1682574188144" duration="687000" />
-      <workItem from="1682757482193" duration="12544000" />
+      <workItem from="1682757482193" duration="20996000" />
+      <workItem from="1683116047596" duration="5249000" />
+      <workItem from="1683611675613" duration="1714000" />
     </task>
     <task id="LOCAL-00001" summary="hello-spring">
       <created>1682171720170</created>
@@ -203,7 +199,21 @@
       <option name="project" value="LOCAL" />
       <updated>1682171735597</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="完成应用上下文">
+      <created>1682835161693</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682835161694</updated>
+    </task>
+    <task id="LOCAL-00004" summary="完成应用上下文">
+      <created>1682835179169</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682835179169</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,7 +232,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="hello-spring" />
-    <option name="LAST_COMMIT_MESSAGE" value="hello-spring" />
+    <MESSAGE value="完成应用上下文" />
+    <option name="LAST_COMMIT_MESSAGE" value="完成应用上下文" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -236,16 +247,6 @@
           <url>file://$PROJECT_DIR$/src/main/java/cn/bobo/springframework/beans/factory/supprt/DefaultListableBeanFactory.java</url>
           <line>38</line>
           <option name="timeStamp" value="15" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/bobo/springframework/context/AbstractApplicationContext.java</url>
-          <line>45</line>
-          <option name="timeStamp" value="17" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/cn/bobo/springframework/context/AbstractApplicationContext.java</url>
-          <line>21</line>
-          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

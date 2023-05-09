@@ -1,5 +1,7 @@
 package cn.bobo.springframework.test.bean.service;
 
+import cn.bobo.springframework.beans.factory.DisposableBean;
+import cn.bobo.springframework.beans.factory.InitializingBean;
 import cn.bobo.springframework.test.bean.dao.UserDao;
 
 /**
@@ -7,7 +9,7 @@ import cn.bobo.springframework.test.bean.dao.UserDao;
  * @Description 测试service
  * @Date 2023/4/22 21:51
  */
-public class UserService {
+public class UserService implements InitializingBean, DisposableBean {
 
     private String uId;
     private String company;
@@ -49,5 +51,15 @@ public class UserService {
 
     public void setUserDao(UserDao userDao) {
         this.userDao = userDao;
+    }
+
+    @Override
+    public void destroy() throws Exception {
+        System.out.println("执行userservice销毁");
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        System.out.println("service bean初始化完成");
     }
 }
