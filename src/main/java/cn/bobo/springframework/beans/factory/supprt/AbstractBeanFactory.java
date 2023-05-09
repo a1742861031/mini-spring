@@ -2,6 +2,7 @@ package cn.bobo.springframework.beans.factory.supprt;
 
 import cn.bobo.springframework.beans.BeansException;
 import cn.bobo.springframework.beans.factory.ConfigurableListableBeanFactory;
+import cn.bobo.springframework.beans.factory.FactoryBean;
 import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 import cn.bobo.springframework.beans.factory.config.BeanPostProcessor;
 import cn.bobo.springframework.utils.ClassUtils;
@@ -14,7 +15,7 @@ import java.util.List;
  * @Description 抽象类定义模版方法
  * @Date 2023/4/22 22:14
  */
-public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry implements ConfigurableListableBeanFactory {
+public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport implements ConfigurableListableBeanFactory {
     private final List<BeanPostProcessor> beanPostProcessors = new ArrayList<>();
     private ClassLoader beanClassLoader = ClassUtils.getDefaultClassLoader();
 
@@ -34,13 +35,29 @@ public abstract class AbstractBeanFactory extends DefaultSingletonBeanRegistry i
     }
 
     protected <T> T doGetBean(final String name, final Object[] args) {
-        Object bean = getSingleTon(name);
-        if (bean != null) {
-            return (T) bean;
+        Object sharedInstance = getSingleTon(name);
+        if (sharedInstance != null) {
+            return (T) getObjectForBeanInstance(sharedInstance, name);
         }
 
         BeanDefinition beanDefinition = getBeanDefinition(name);
-        return (T) createBean(name, beanDefinition, args);
+        Object bean = createBean(name, beanDefinition, args);
+        return (T) getObjectForBeanInstance(bean, name);
+    }
+
+    private Object getObjectForBeanInstance(Object beanInstance, String beanName) {
+        if (!(beanInstance instanceof FactoryBean)) {
+            return beanInstance;
+        }
+
+        Object object = getCachedObjectForFactoryBean(beanName);
+
+        if (object == null) {
+            FactoryBean<?> factoryBean = (FactoryBean<?>) beanInstance;
+            object = getObjectFromFactoryBean(factoryBean, beanName);
+        }
+
+        return object;
     }
 
     /**

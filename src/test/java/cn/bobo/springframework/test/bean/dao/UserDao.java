@@ -8,7 +8,7 @@ import java.util.Map;
  * @Description UserDao
  * @Date 2023/4/25 14:58
  */
-public class UserDao {
+public class UserDao implements IUserDao {
 
     private static Map<String, String> hashMap = new HashMap<>();
 
@@ -30,6 +30,7 @@ public class UserDao {
         hashMap.clear();
     }
 
+    @Override
     public String queryUserName(String uId) {
         return hashMap.get(uId);
     }

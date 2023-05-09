@@ -18,13 +18,19 @@ public class ApiTest {
         // 1.初始化 BeanFactory
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
         applicationContext.registerShutdownHook();
+        UserService userService1 = applicationContext.getBean("userService", UserService.class);
+        UserService userService2 = applicationContext.getBean("userService", UserService.class);
+        System.out.println(userService1);
+        System.out.println(userService2);
+        System.out.println(userService1 == userService2);
 
-        // 2. 获取Bean对象调用方法
-        UserService userService = applicationContext.getBean("userService", UserService.class);
-        String result = userService.queryUserInfo();
-        System.out.println("测试结果：" + result);
-        System.out.println("ApplicationContextAware：" + userService.getApplicationContext());
-        System.out.println("BeanFactoryAware：" + userService.getBeanFactory());
     }
 
+    @Test
+    public void test_factory_bean() {
+        ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath:spring.xml");
+        applicationContext.registerShutdownHook();
+        UserService userService = applicationContext.getBean("userService", UserService.class);
+        System.out.println("测试结果：" + userService.queryUserInfo());
+    }
 }
