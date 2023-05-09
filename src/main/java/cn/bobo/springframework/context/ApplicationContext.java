@@ -1,6 +1,5 @@
 package cn.bobo.springframework.context;
 
-import cn.bobo.springframework.beans.BeansException;
 import cn.bobo.springframework.beans.factory.ListableBeanFactory;
 
 /**
