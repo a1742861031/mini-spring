@@ -3,8 +3,7 @@ package cn.bobo.springframework.beans.factory.supprt;
 import cn.bobo.springframework.beans.BeansException;
 import cn.bobo.springframework.beans.PropertyValue;
 import cn.bobo.springframework.beans.PropertyValues;
-import cn.bobo.springframework.beans.factory.DisposableBean;
-import cn.bobo.springframework.beans.factory.InitializingBean;
+import cn.bobo.springframework.beans.factory.*;
 import cn.bobo.springframework.beans.factory.config.BeanDefinition;
 import cn.bobo.springframework.beans.factory.config.BeanPostProcessor;
 import cn.bobo.springframework.beans.factory.config.BeanReference;
@@ -46,6 +45,17 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
     }
 
     private Object initializeBean(String beanName, Object bean, BeanDefinition beanDefinition) {
+        if (bean instanceof Aware) {
+            if (bean instanceof BeanFactoryAware) {
+                ((BeanFactoryAware) bean).setBeanFactory(this);
+            }
+            if (bean instanceof BeanClassLoaderAware) {
+                ((BeanClassLoaderAware) bean).setBeanClassLoader(getBeanClassLoader());
+            }
+            if (bean instanceof BeanNameAware) {
+                ((BeanNameAware) bean).setBeanName(beanName);
+            }
+        }
         Object wrapperBean = null;
         try {
             //1.执行BeanPostProcessor Before处理
