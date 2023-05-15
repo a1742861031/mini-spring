@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans>
 
-    <bean id="userService" class="cn.bobo.springframework.test.bean.service.UserService" scope="prototype">
-        <property name="uId" value="10001"/>
-        <property name="company" value="腾讯"/>
-        <property name="location" value="深圳"/>
-        <property name="userDao" ref="proxyUserDao"/>
-    </bean>
+    <bean class="cn.bobo.springframework.test.event.CustomEventListener"/>
 
-    <bean id="proxyUserDao" class="cn.bobo.springframework.test.bean.factory.ProxyBeanFactory"/>
 
 </beans>
